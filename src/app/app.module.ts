@@ -4,17 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {TemperatureService} from "./temperature.service";
+import { WeatherChartComponent } from './weather-chart/weather-chart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WeatherChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [TemperatureService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
